@@ -39,12 +39,12 @@ public class AdminController {
     public ResponseEntity<Void> admin(@RequestParam String method) {
         if ((method != null) && (method.equals("reset"))) {
             voteRepository.reset();
-            return new ResponseEntity<Void>(HttpStatus.OK);
+            return new ResponseEntity<>(HttpStatus.OK);
         } else if ((method != null) && (method.equals("reopen"))) {
             voteRepository.reOpenAll();
-            return new ResponseEntity<Void>(HttpStatus.OK);
+            return new ResponseEntity<>(HttpStatus.OK);
         }
-        return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
 }
