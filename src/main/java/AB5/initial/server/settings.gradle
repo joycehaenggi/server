@@ -1,0 +1,3 @@
+package AB5.initial.server
+
+rootProject.name = 'server'
